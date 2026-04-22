@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Дронявка.рф</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="img/dronyavka.jpg" alt="Фото">
+      <img src="img/dronyavka2.png" alt="Фото">
+      <img class="crop" src="img/dronyavka3.jpg" alt="Фото">
+      <h1>Кириллица</h1>
+      
+    </header>
+
+    <nav>
+      <strong>Меню</strong>
+      <a href="index.html">Новости </a>
+      <a class="nav-podsvet1" href="#">Биография</a>
+      <a href="#">Проекты</a>
+            <div class="wrapper">
+                </div>
+      <a href="#">Контакты</a>
+      <a href="#">Ссылки</a>
+      <a href="photoalbum.html" href="#">Фотоальбом со мной</a>
+      <a class="social-link" href="https://t.me/dronizm"  target="_blank" title="Телега">
+        <img src="img/telega.png" alt="Telegram">
+        </a>   
+      <a class="social-link" href="https://www.youtube.com/@orrishai"  target="_blank" title="Ютуб">
+        <img src="img/youtube.png" alt="Youtube">
+        </a>   
+      <a class="social-link" href="https://music.yandex.ru/artist/9729779"  target="_blank" title="Ямузыка">
+        <img src="img/yamusic.png" alt="Youtube">
+          
+        </a>   
+        <a class="social-link" href="https://www.twitch.tv/leik0z"  target="_blank" title="Твич">
+        <img src="img/icons8-twitch-48.png" alt="Twitch">
+        </a>  
+        
+        <a class="social-link" href="https://github.com/Ha4alnik52"  target="_blank" title="Гитхаб">
+        <img src="img/icons8-github-48.png" alt="GitHub">
+        </a>  
+        
+      <a class="macjinhadv" href="https://macjinha.ru/" target="_blank">
+        <img  src="img/macjinhadv.jpg" alt="macjinha">
+        
+        </a>
+    </nav>
+
+    <main>
+      <h2>Биография</h2>
+      <p>Родился в Казани в 2005 году.</p>
+        <div class="news">
+            
+      
+            </div>
+            
+    </main>
+
+    <footer>
+      © 2025 Дронявка чмонявка. Все права НЕ защищены.
+       <button id="music-btn">🔊 Включить музыку</button>
+        
+      <div id="track-container" class="track-container hidden">
+  <div class="marquee-wrapper">
+    <div class="track-marquee">
+      🎵 Сегодня играет: Idiot Pilot — Open Register
+    </div>
+  </div>
+</div>
+<audio id="bg-music" loop>
+  <source src="music/idiot-pilot-open-register.mp3" type="audio/mpeg">
+</audio>
+        <script>
+  const btn = document.getElementById('music-btn');
+  const audio = document.getElementById('bg-music');
+  let isPlaying = false;
+  audio.volume = 0.05;
+
+  btn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      btn.textContent = '🔇 Включить музыку';
+    } else {
+      audio.play();
+      btn.textContent = '🔊 Выключить музыку';
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+        
+        
+        <script>
+    const btn = document.getElementById('music-btn');
+const audio = document.getElementById('bg-music');
+const trackContainer = document.getElementById('track-container');
+let isPlaying = false;
+
+audio.volume = 0.05;
+
+btn.addEventListener('click', () => {
+  if (isPlaying) {
+    audio.pause();
+    btn.textContent = '🔇 Включить музыку';
+    trackContainer.classList.add('hidden'); // Скрываем бегущую строку
+  } else {
+    audio.play();
+    btn.textContent = '🔊 Выключить музыку';
+    trackContainer.classList.remove('hidden'); // Показываем бегущую строку
+  }
+  isPlaying = !isPlaying;
+});
+        </script>
+    </footer>
+  </div>
+</body>
+</html>

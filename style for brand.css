@@ -1,0 +1,82 @@
+body {
+  background: #dcdcdc url('bg-forum.jpg');
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.forum-brand {
+  width: 90%;
+  margin: 20px auto;
+  border: 2px groove gray;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.forum-title {
+  font-size: 16px;
+  background: linear-gradient(to right, #c0c0c0, #ffffff);
+  padding: 5px 10px;
+  border: 1px solid #999;
+  margin-bottom: 10px;
+  color: #00008b;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.forum-post {
+  display: flex;
+  border: 1px solid #aaa;
+  background: #fff;
+}
+
+.user-info {
+  width: 150px;
+  background: #efefef;
+  border-right: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+}
+
+.post-content {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #999;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.price {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+.old-button {
+  margin-top: 10px;
+  background: #e0e0e0;
+  border: 2px outset #aaa;
+  font-family: Tahoma;
+  font-size: 12px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.old-button:active {
+  border-style: inset;
+}

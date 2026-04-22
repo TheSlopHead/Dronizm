@@ -1,0 +1,388 @@
+body {
+  background-color: black;
+  color: #000;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.news-item {
+  max-width: 600px;   /* или сколько у тебя колонка */
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  background: url('img/i.webp'); /* Цветастый фон */
+  background-repeat: repeat;
+  background-size:100px;
+  border: 2px double red;
+    
+  padding: 10px;
+}
+.container {
+  zoom: 1.2;
+}
+header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 2px dashed red;
+  padding: 10px;
+}
+.crop {
+    width: 237px;
+    height: 175px;
+    object-fit:cover;
+    object-position:center 75%;
+    border: 2px solid red;
+    
+    
+    
+}
+
+.hyperlink {
+    color: darkred;
+    border-bottom: 2px dashed red;
+    border-bottom-style: dotted;
+    text-decoration: none;
+    
+    
+}
+
+
+
+header img {
+  height: 175px;
+  margin-right: 10px;
+  border: 2px solid red;
+}
+
+
+.img-border {
+    
+  border: 2px solid red;
+    
+    
+}
+
+header h1 {
+  font-size: 32px;
+  color: darkred;
+  margin: 10px;
+}
+.wrapper {
+    
+  position: relative;
+  overflow: hidden;
+   }
+
+
+nav {
+  float: right;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-left: 2px solid red;
+}
+
+
+
+    
+    
+
+
+.arrow img {
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    top: -5px;
+    right: 10px;
+    transform: scaleX(-1);
+   object-fit: cover;
+    transition: transform 0.3s ease;
+    animation: nudge 1.5s infinite;
+    
+    
+    
+    
+}
+
+
+
+
+@keyframes nudge {
+  0%   { transform: scaleX(-1) translateX(0); }
+  50%  { transform: scaleX(-1) translateX(-4px); }
+  100% { transform: scaleX(-1) translateX(0); }
+}
+
+
+
+
+
+
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    border: 1px solid red;
+    display: inline-block;
+    
+    
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    
+    
+    
+    
+    
+}
+
+.macjinhadv img {
+    
+    height: 75px;
+    object-fit:contain;
+    animation: flicker 4s infinite, shake 0.3s infinite;
+    
+    
+}
+
+@keyframes flicker {
+    
+    0%, 100% { opacity: 1; }
+    40% { opacity: 0; }
+  60% { opacity: 1; }
+  80% { opacity: 0.5; }
+
+    
+    
+    
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+
+
+
+.nav-podsvet1 {
+    color: darkred;
+    text-decoration: none;
+    font-size: 20px;
+    
+    
+    
+}
+
+nav a {
+  display: block;
+  text-decoration: underline;
+  color: blue;
+  margin-bottom: 5px;
+}
+
+
+
+main {
+  margin-right: 220px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+footer {
+  clear: both;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+  font-size: 12px;
+}
+
+.news p {
+    border-bottom: 1px double red;
+    border-bottom-style: dotted;
+    padding-bottom: 10px;
+    
+    
+    
+}
+
+
+
+/** PHOTOALBUM **/
+
+/* затемнение */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+/* активируем при переходе по якорю */
+.lightbox:target {
+  display: block;
+}
+
+/* кликабельная область закрытия */
+.lightbox .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* блок с картинкой */
+.lightbox .popup {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px white;
+  background: #fff;
+  padding: 8px;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* <-- ВЫРАВНИВАЕТ ПО ВЕРХУ */
+  gap: 10px; /* отступы между фото */
+}
+
+
+/* Музыка на сайте*/
+
+
+
+.hidden {
+      display: none;
+    }
+
+    .track-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: black;
+      color: lime;
+      font-family: monospace;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-top: 2px solid lime;
+      border-bottom: 2px solid lime;
+      z-index: 1000;
+    }
+
+    .track-marquee {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scrollText 10s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+.news-item {
+  background: #f2f2f2;
+  border: 1px solid #999;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-family: "Courier New", monospace;
+  color: #111;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.news-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.news-author {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #333;
+  border-top: 1px dashed #999;
+  padding-top: 6px;
+  text-align: right;
+  font-style: italic;
+}
+footer {
+  padding-bottom: 40px; /* место под бегущую строку */
+}
+
+#music-btn {
+  position: relative;
+  z-index: 1100;
+}
+.news-video {
+  margin: 10px 0 12px 0;
+  border: 1px solid #999;
+  padding: 4px;
+  background: #ddd;
+}
+.news-video-img {
+  margin: 10px 0;
+  border: 1px solid #999;
+  background: #ccc;
+  padding: 4px;
+}
+
+.news-video-img img {
+  width: 100%;
+  display: block;
+}
+
+.youtube-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #111;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #0f0;
+}
+
+.youtube-btn:hover {
+  background: #0f0;
+  color: #000;
+}
+
